@@ -1,14 +1,14 @@
 {
-  "name": "uyuni",
-  "version": "1.0.0",
-  "description": "Uyuni website",
+  "name": "geckito",
+  "version": "0.0.1",
+  "description": "Geckito website",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "uyuni"
+    "geckito", "IoT", "embedded", "edge", "openSUSE", "SUSE"
   ],
-  "author": "en3sis",
+  "author": "adrianschroeter",
   "license": "MIT"
 }
