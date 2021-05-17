@@ -114,26 +114,6 @@
         <div class="accordion" id="accordion-geckito">
           <!-- Start item -->
           <div class="accordion-wrap">
-            <div class="accordion-header" data-toggle="collapse" data-target="#item2" aria-expanded="false"
-              aria-controls="item2">
-              <h5><img src="img/plus.svg" class="accordion-plus">A Linux distribution in binary and source form</h5>
-            </div>
-            <div id="item2" class="collapse hide accordion-content" aria-labelledby="headingOne"
-              data-parent="#accordion-geckito">
-              <p>
-                The Geckito project is based on the popular openSUSE distribution to deliver binaries and sources suitable
-		for embedded development. It offers reproducible and cross architecture builds for a defined
-		maintenance time frame.
-              </p>
-              <p>
-	        The shared code base with the build script guarantees that the builds stay compatible with the build
-		results from the Open Build Service (esp. for openSUSE and SUSE Linux Enterprise distributions).
-              </p>
-            </div>
-          </div>
-          <!-- End item -->
-          <!-- Start item -->
-          <div class="accordion-wrap">
             <div class="accordion-header" data-toggle="collapse" data-target="#item1" aria-expanded="true"
                  aria-controls="item1">
               <h5><img src="img/plus.svg" class="accordion-plus">Build Environment</h5>
@@ -152,6 +132,26 @@
             </div>
           </div>
           <!-- End item -->
+          <!-- Start item -->
+          <div class="accordion-wrap">
+            <div class="accordion-header" data-toggle="collapse" data-target="#item2" aria-expanded="false"
+              aria-controls="item2">
+              <h5><img src="img/plus.svg" class="accordion-plus">A Linux distribution in binary and source form</h5>
+            </div>
+            <div id="item2" class="collapse hide accordion-content" aria-labelledby="headingOne"
+              data-parent="#accordion-geckito">
+              <p>
+                The Geckito project is based on the popular openSUSE distribution to deliver binaries and sources suitable
+		for embedded development. It offers reproducible and cross architecture builds for a defined
+		maintenance time frame.
+              </p>
+              <p>
+	        The shared code base with the build script guarantees that the builds stay compatible with the build
+		results from the Open Build Service (esp. for openSUSE and SUSE Linux Enterprise distributions).
+              </p>
+            </div>
+          </div>
+          <!-- End item -->
 
           <!-- Start item -->
           <div class="accordion-wrap">
@@ -162,9 +162,8 @@
             <div id="item3" class="collapse hide accordion-content" aria-labelledby="headingOne"
               data-parent="#accordion-geckito">
               <p>
-                Templates are demonstrating how the tooling and distribution can be used to build maintainable
-		images designed for IoT devices. Unlike classic Linux distribution images these images are
-		supposed to get rebuild for updating the system. As a result the images can become much smaller.
+                Templates demonstrate how the to build small, targeted images. This can include the
+		usage of pre-build binaries, own rpm packages, container and own application builds.
               </p>
             </div>
           </div>
@@ -209,6 +208,12 @@
             <div id="item3-2" class="collapse hide accordion-content" aria-labelledby="headingOne"
               data-parent="#accordion-geckito-2">
               <p>
+	      The simplest way is to build for the native distribution using the standard tools. This can be
+	      done via the SUSE build script, the Open Build Service or just native tooling.
+              </p>
+	      <p>
+	      MS-Windows users can use the SDK via provided WSL images, directly usable from our Eclipse or
+	      MS Visual Code IDE.
               </p>
             </div>
           </div>
@@ -221,7 +226,10 @@
             </div>
             <div id="item3-2" class="collapse hide accordion-content" aria-labelledby="headingOne"
               data-parent="#accordion-geckito-2">
-              <p>
+	      <p>
+              Cross Architecture build tooling is also developed as part of the Geckito project. Available
+	      for application developer, but also supported for package or image builds. This allows fast turn
+	      around times and easy debugging.
               </p>
             </div>
           </div>
