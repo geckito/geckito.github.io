@@ -24,7 +24,7 @@
 <header>
   <div class="container">
         <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="https://www.uyuni-project.org/">
+            <a class="navbar-brand" href="https://www.geckito.org/">
                 <img src="img/logo-letters.svg" alt="">
             </a>
 
@@ -36,10 +36,7 @@
                         DOWNLOAD
                     </a>
                     <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="pages/stable-version.html">Stable</a>
-                        <a class="dropdown-item" href="pages/devel-version.html">Develop</a>
-                        <a class="dropdown-item" href="pages/patches.html">Patches</a>
-                        <a class="dropdown-item" href="pages/source-code.html">Source code</a>
+                        <a class="dropdown-item" href="pages/templates.html">Templates</a>
                     </div>
                 </li>
                 <!-- DOCS -->
@@ -48,8 +45,8 @@
                         DOCUMENTATION
                     </a>
                     <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="https://www.uyuni-project.org/uyuni-docs/">Guides</a>
-                        <a class="dropdown-item" href="https://www.uyuni-project.org/uyuni-docs-api/">API</a>
+                        <a class="dropdown-item" href="https://www.geckito.org/scope/">Scope</a>
+                        <a class="dropdown-item" href="https://www.geckito.org/build/">Build Tool</a>
                     </div>
                 </li>
                 <!-- FAQ -->
@@ -74,8 +71,9 @@
         </nav>
         <!-- #nav -->
     <div class="landing-description">
-      <img class="uyuni-logo" src="img/uyuni-logo.svg" alt="Uyuni logo">
-      <p>The open-source configuration and infrastructure management solution for software-defined infrastructure.</p>
+      <img class="geckito-logo" src="img/geckito-logo.svg" alt="Uyuni logo">
+      <p>The maintainable IoT distribution</p>
+<!--
       <div class="cta-section">
         <a href='pages/stable-version.html' class="btn btn-primary">
           <span class="badge eos-icons">get_app</span>
@@ -88,6 +86,7 @@
         </button>
         </a>
       </div>
+-->
     </div>
   </div>
 </header>
@@ -99,22 +98,23 @@
         <img class="img-fluid home-illustration" src="img/il_1.svg" alt="">
       </div>
       <div class="col-md">
-        <h3>What is Uyuni?</h3>
+        <h3>What is Geckito?</h3>
         <p class="section-description">
-          Uyuni is a configuration and infrastructure management tool that saves you time and headaches when you have to manage and update tens, hundreds or even thousands of machines.
+          Geckito is an umbrella project to make (open)SUSE distributions ready for Edge and IoT environments.
         </p>
 
-        <div class="accordion" id="accordion-uyuni">
+        <div class="accordion" id="accordion-geckito">
           <!-- Start item -->
           <div class="accordion-wrap">
             <div class="accordion-header" data-toggle="collapse" data-target="#item1" aria-expanded="true"
                  aria-controls="item1">
-              <h5><img src="img/plus.svg" class="accordion-plus"> Automated patch and package management</h5>
+              <h5><img src="img/plus.svg" class="accordion-plus">Build Tooling</h5>
             </div>
             <div id="item1" class="collapse show accordion-content" aria-labelledby="headingOne"
-                 data-parent="#accordion-uyuni">
+                 data-parent="#accordion-geckito">
               <p>
-                enables you to deploy patches and packages based on software channels and repositories you can assign, helping you to reduce costs.
+                pbuild is able to build multiple artefacts in many formats like images, container or packages. It can work complete offline,
+		but also use online resources.
               </p>
             </div>
           </div>
@@ -123,12 +123,15 @@
           <div class="accordion-wrap">
             <div class="accordion-header" data-toggle="collapse" data-target="#item2" aria-expanded="false"
               aria-controls="item2">
-              <h5><img src="img/plus.svg" class="accordion-plus"> Easily onboard and manage</h5>
+              <h5><img src="img/plus.svg" class="accordion-plus">A distribution in binary and source form.</h5>
             </div>
             <div id="item2" class="collapse hide accordion-content" aria-labelledby="headingOne"
-              data-parent="#accordion-uyuni">
+              data-parent="#accordion-geckito">
               <p>
-                any Linux server connected to the network, from IoT edge devices to your Kubernetes environment, no matter where it is located – in your data center, a 3rd party data center or in the public cloud.
+                The pbuild tool is distribution agnostic and supports rpm, debian and arch distributions. However the
+	        geckito project is focusing on the (open)SUSE distributions to deliver binaries and sources suitable
+		for embedded development. This includes reproducible builds, cross architecture builds for a defined
+		maintenance time frame.
               </p>
             </div>
           </div>
@@ -138,12 +141,14 @@
           <div class="accordion-wrap">
             <div class="accordion-header" data-toggle="collapse" data-target="#item3" aria-expanded="false"
               aria-controls="item3">
-              <h5><img src="img/plus.svg" class="accordion-plus"> A single tool for automated deployment </h5>
+              <h5><img src="img/plus.svg" class="accordion-plus">A template collection</h5>
             </div>
             <div id="item3" class="collapse hide accordion-content" aria-labelledby="headingOne"
-              data-parent="#accordion-uyuni">
+              data-parent="#accordion-geckito">
               <p>
-                of hardened OS templates (bare metal, VM or container) to tens of thousands of servers and IoT devices for faster, consistent and repeatable provisioning and configuration without compromising speed or security.
+                Templates are demonstrating how the tooling and distribution can be used to build maintainable
+		images designed for IoT devices. Unlike classic Linux distribution images these images are
+		supposed to get rebuild for updating the system. As a result the images can become much smaller.
               </p>
             </div>
           </div>
@@ -157,25 +162,21 @@
 
     <div class="row content-padding row-eq-height">
       <div class="col-md">
-        <h3>How does Uyuni work?</h3>
+        <h3>How does Geckito work?</h3>
         <p class="section-description">
-          Uyuni leverages the Salt configuration management system to manage clients.
-          The Uyuni Server is a full-fledged Salt Master node, allowing you to register and manage Salt clients.
-          For more information about Salt, see the Salt documentation at <a href="https://docs.saltstack.com/en/latest/contents.html" >Saltstack</a>
         </p>
 
-        <div class="accordion" id="accordion-uyuni-2">
+        <div class="accordion" id="accordion-geckito-2">
 
           <!-- Start item -->
           <div class="accordion-wrap">
             <div class="accordion-header" data-toggle="collapse" data-target="#item2-2" aria-expanded="false"
               aria-controls="item2-2">
-              <h5><img src="img/plus.svg" class="accordion-plus"> Detailed compliance auditing </h5>
+              <h5><img src="img/plus.svg" class="accordion-plus"> Detailed license checking</h5>
             </div>
             <div id="item2-2" class="collapse hide accordion-content" aria-labelledby="headingOne"
-              data-parent="#accordion-uyuni-2">
+              data-parent="#accordion-geckito-2">
               <p>
-                and reporting with the ability to track all hardware and software changes made to your managed Linux infrastructure helps to ensure compliance with internal security policies
               </p>
             </div>
           </div>
@@ -184,29 +185,15 @@
           <div class="accordion-wrap">
             <div class="accordion-header" data-toggle="collapse" data-target="#item3-2" aria-expanded="false"
               aria-controls="item3-2">
-              <h5><img src="img/plus.svg" class="accordion-plus"> Quickly identify systems</h5>
+              <h5><img src="img/plus.svg" class="accordion-plus"> Cross Architecture Builds</h5>
             </div>
             <div id="item3-2" class="collapse hide accordion-content" aria-labelledby="headingOne"
-              data-parent="#accordion-uyuni-2">
+              data-parent="#accordion-geckito-2">
               <p>
-                deployed in hybrid cloud and container infrastructures that are out of compliance to hardened profiles/templates based on your own internal security policies ensuring faster non-compliant remediation.
               </p>
             </div>
           </div>
           <!-- End item -->
-          <!-- Start item -->
-          <div class="accordion-wrap">
-            <div class="accordion-header" data-toggle="collapse" data-target="#item4-2" aria-expanded="false"
-              aria-controls="item4-2">
-              <h5><img src="img/plus.svg" class="accordion-plus"> Simplified management</h5>
-            </div>
-            <div id="item4-2" class="collapse hide accordion-content" aria-labelledby="headingOne"
-              data-parent="#accordion-uyuni-2">
-              <p>
-                with graphical visualization of your Linux systems and their relationships along with the capability to organize them into logical groupings based on tags (e.g. location, rack, vendor, CPU architecture, RAM, etc.)
-              </p>
-            </div>
-          </div><!-- End item -->
         </div> <!-- #accordion -->
       </div>
       <div class="col-md d-flex justify-content-center">
@@ -233,20 +220,10 @@
           <!-- News box Start -->
           <div class="news-box">
             <div class="news-box-title">
-                <span>04/05/2021</span>
+                <span>20/06/2021</span>
             </div>
             <div class="news-box-content">
-                <p>Uyuni has a new repository called <a target="_blank" href="https://github.com/uyuni-project/contrib/">Contrib</a>. Contrib is a collection of tools that are are not (yet!) officially part of the Uyuni product.</p>
-            </div>
-          </div>
-          <!-- News box End -->
-          <!-- News box Start -->
-          <div class="news-box">
-            <div class="news-box-title">
-              <span>21/04/2021</span>
-            </div>
-            <div class="news-box-content">
-              <p>Uyuni 2021.04 is now available! Amazon Linux 2, Alibaba Linux 2 and AlmaLinux 8 are now supported as clients. Redfish Power Management, Node exporter 1.1.2, SCAP content and much more! Check the <a href="../pages/stable-version.html#releasenotes">release notes</a> for more details.</p>
+                <p>Initial start of the project.</p>
             </div>
           </div>
           <!-- News box End -->
@@ -260,28 +237,22 @@
   <footer>
     <div class="row content-padding">
       <div class="col-md-4 footer-description">
-        <h4>Uyuni</h4>
+        <h4>Geckito</h4>
         <span class="footer-legal">
-          © 2021 The Uyuni Project
+          © 2021 The Geckito Project
         </span>
       </div>
 
       <div class="col-md">
         <h6>Project</h6>
         <ul>
-          <li><a href="https://www.uyuni-project.org/uyuni-docs/">Documentation</a></li>
+          <li><a href="https://www.geckito.org/geckito-docs/">Documentation</a></li>
           <li><a href="pages/faq.html">FAQ</a></li>
-          <li><a href="https://github.com/uyuni-project/uyuni/wiki/Presentations">Presentations</a></li>
-          <li><a href="pages/stable-version.html">Stable version</a></li>
-          <li><a href="pages/devel-version.html">Development version</a></li>
-          <li><a href="pages/patches.html">Patches</a></li>
-          <li><a href="pages/source-code.html">Source code</a></li>
           <li><a href="pages/contact.html#ml">Mailing lists</a></li>
           <li><a href="pages/contact.html#irc">Chat</a></li>
-          <li><a href="https://github.com/uyuni-project/sumaform/">Sumaform</a></li>
-          <li><a href="https://github.com/uyuni-project/uyuni-rfc/">RFCs</a></li>
         </ul>
       </div>
+<!--
       <div class="col-md">
         <h6>Related links</h6>
         <ul>
@@ -291,23 +262,12 @@
           <li><a href="https://spacewalkproject.github.io"/>Spacewalk</a></li>
         </ul>
       </div>
+-->
       <div class="col-md">
         <h6>Social</h6>
         <div class="social-links">
-          <a href="https://github.com/uyuni-project" target="_blank">
-            <img src="img/github_white.svg" alt="Uyuni - Github" title="GitHub source repository">
-          </a>
-          <a href="https://l10n.opensuse.org/projects/uyuni/" target="_blank">
-            <img src="img/Weblate_logo.svg" width="24" height="24" alt="Uyuni - Weblate" title="Translate Uyuni to your language">
-          </a>
-          <a href="https://gitter.im/uyuni-project" target="_blank">
-            <img src="img/gitter.svg" alt="Uyuni - Gitter" title="Gitter chat rooms">
-          </a>
-          <a href="https://www.youtube.com/channel/UCB0SkZFAw9vPCFeUIYqZQ5A" target="_blank">
-            <img src="img/yt_icon_mono_dark.svg" width="24" height="24" alt="Uyuni - YouTube" title="YouTube channel">
-          </a>
-          <a href="https://twitter.com/UyuniProject" target="_blank">
-            <img src="img/twitter.svg" alt="Uyuni - Twitter" title="Twitter">
+          <a href="https://github.com/geckito" target="_blank">
+            <img src="img/github_white.svg" alt="Geckito - Github" title="GitHub source repository">
           </a>
         </div>
       </div>
