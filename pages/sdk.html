@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Geckito - SDB</title>
+    <meta name="description" content="Geckito - SDB">
+
+    <link rel="apple-touch-icon" sizes="152x152" href="../img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+          crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/eos-icons-extended.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+</head>
+<body>
+
+<!-- Start here -->
+<header>
+  <div class="container">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="https://www.geckito.org/">
+                <img src="/img/geckito-letters.png" alt="">
+            </a>
+
+            <ul class="nav top-nav d-flex justify-content-end">
+
+                <!-- Dropdown for available Geckito versions -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        RESOURCES
+                    </a>
+                    <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/pages/sdk.html">SDK</a>
+                        <a class="dropdown-item" href="https://github.com/geckito/geckito-templates">Templates</a>
+                        <a class="dropdown-item" href="/pages/pbuild.html">Build Tool</a>
+                    </div>
+                </li>
+                <!-- DOCS -->
+<!--
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        DOCUMENTATION
+                    </a>
+                    <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="https://www.geckito.org/scope/">Scope</a>
+                    </div>
+                </li>
+-->
+                <!-- FAQ -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/faq.html">FAQ</a>
+                </li>
+                <!-- NEWS -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/news.html">NEWS</a>
+                </li>
+                <!-- Contact -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/contact.html">CONTACT</a>
+                </li>
+<!--
+                <li class="nav-item">
+                    <a class="nav-link" href="https://twitter.com/Geckito" target="_blank">
+                        <img src="img/twitter.svg" alt="Geckito - Twitter" title="Twitter" />
+                    </a>
+                </li>
+-->
+            </ul>
+        </nav>
+        <!-- #nav -->
+    <div class="landing-description">
+      <img class="geckito-logo" src="/img/geckito-white.png" alt="Geckito logo">
+      <p>Linux for Embedded, long term maintainable</p>
+      <div class="cta-section">
+<!--
+        <a href='/pages/stable-version.html' class="btn btn-primary">
+          <span class="badge eos-icons">get_app</span>
+          Get new 2021.04!
+        </a>
+        <a href="/pages/source-code.html">
+        <button type="button" class="btn btn-light">
+          <span class="badge eos-icons">code</span>
+          Source code
+        </button>
+        </a>
+-->
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container page-wrapper">
+    <div class="container">
+        <div class="row content-padding subpage-content">
+            <h4><a href="#releasenotes">The Geckito SDK</a></h4>
+            <div class="subpage-content-push-right">
+                <p>The Geckito SDK provides all build tooling and the templates for building your device image.
+		  This includes a native compiler toolchain, a cross compiler and build tooling for package and image building (pbuild).</p>
+                <p>The SDK is delivered in multiple forms:</p>
+            </div>
+            <h4><a href="#code">Linux Container</a></h4>
+            <div class="subpage-content-push-right">    
+                <p>A container is provided which includes the entire tooling. Further software can get installed via zypper inside of the container. It can get pulled on any Linux distribution using podman or docker tooling.</p>
+                <code>$ podman pull registry.opensuse.org/home/adriansuse/geckito/images/geckito/sdk:15.3
+		</code>
+            </div>
+            <div class="subpage-content-push-right">    
+		    <p>A MS-Windows WSL image is provided which includes the same tooling. Further software can get installed via zypper inside of the container. The image is currently not yet official signed and needs therefore installed as documented <a href="https://en.opensuse.org/WSL/Manual_Installation">here.</a> The WSL image can get found <a href="https://download.opensuse.org/repositories/home:/adrianSuSE:/Geckito/images/">here.</a> 
+            </div>
+            <div class="subpage-content-push-right">    
+	    <p>openSUSE Linux or SUSE Linux Enterprise users can also install the packages directly without a container. Find your matching repository <a href=""http://download.opensuse.org/repositories/Geckito:SDK:0.1/>here.</a></p>
+            </div>
+		<p>Or install the "build" package for your distribution <a href=""http://download.opensuse.org/repositories/openSUSE:/Tools/>here.</a></p>
+        </div>
+    </div> <!-- #container -->
+  <!-- Footer -->
+<!--
+  <footer>
+    <div class="row content-padding">
+      <div class="col-md-4 footer-description">
+        <h4>Geckito</h4>
+        <span class="footer-legal">
+          © 2021 The Geckito Project
+        </span>
+      </div>
+
+      <div class="col-md">
+        <h6>Project</h6>
+        <ul>
+          <li><a href="https://www.geckito.org/geckito-docs/">Documentation</a></li>
+          <li><a href="/pages/faq.html">FAQ</a></li>
+          <li><a href="/pages/contact.html#ml">Mailing lists</a></li>
+          <li><a href="/pages/contact.html#irc">Chat</a></li>
+        </ul>
+      </div>
+<!--
+      <div class="col-md">
+        <h6>Related links</h6>
+        <ul>
+          <li><a href="https://www.suse.com/products/suse-manager/">SUSE Manager</a></li>
+          <li><a href="https://www.saltstack.com/">SaltStack</a></li>
+          <li><a href="https://cobbler.github.io/">Cobbler</a></li>
+          <li><a href="https://spacewalkproject.github.io"/>Spacewalk</a></li>
+        </ul>
+      </div>
+-->
+      <div class="col-md">
+        <h6>Social</h6>
+        <div class="social-links">
+          <a href="https://github.com/geckito" target="_blank">
+            <img src="/img/github_white.svg" alt="Geckito - Github" title="GitHub source repository">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+-->
+  <!-- end footer -->
+</div>
+<!-- .page-wrapper -->
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="../js/script.js"></script>
+</html>
