@@ -100,16 +100,18 @@
         <div class="row content-padding subpage-content">
             <h4><a href="#releasenotes">The pbuild tool</a></h4>
             <div class="subpage-content-push-right">
-                <p>pbuild is part of the SUSE build script code base. The build script is used to setup a defined build environment
-		  for any kind of build. This starts from classic rpm, debian or arch package builds, it covers various image build formats including containers.</p>
-                <p>The build script can be used as stand-alone tool, but is also used by pbuild. pbuild is extending the functionality to manage multiple build artefacts. It can be used to build entire distributions from source or just parts of them.</p>
+                <p>pbuild is part of the SUSE build code base, which provides safe and reprodicible building. It supports
+		  multiple kind of builds, starting with classic rpm, debian or arch package builds, to various image build formats including containers or appliances.</p>
+                <p>Single builds can be done with the stand-alone "build" tool, whereas a complete project build consisting of multiple
+                   build is done with pbuild. In that case multiple single "build" calls are done in parallel obeying dependencies
+                   of every step. The pbuild tool is capable of building an entire distribution from source or just parts of it.</p>
             </div>
             <h4><a href="#code">Code</a></h4>
             <div class="subpage-content-push-right">    
                 <p>The pbuild tool can be used from the a git clone or via provided packages</p>
                 <code>$ git clone https://github.com/openSUSE/obs-build
 		</code>
-		<p>Or install the "build" package for your distribution <a href=""http://download.opensuse.org/repositories/openSUSE:/Tools/>here.</a></p>
+		<p>Alternatively you can install the "build" package for your distribution <a href=""http://download.opensuse.org/repositories/openSUSE:/Tools/>here.</a></p>
             </div>
         </div>
     </div> <!-- #container -->
