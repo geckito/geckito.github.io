@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Geckito - Goals</title>
+    <meta name="description" content="Geckito - Goals">
+
+    <link rel="apple-touch-icon" sizes="152x152" href="../img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+          crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/eos-icons-extended.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+</head>
+<body>
+
+<!-- Start here -->
+<header>
+  <div class="container">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="https://www.geckito.org/">
+                <img src="/img/geckito-letters.png" alt="">
+            </a>
+
+            <ul class="nav top-nav d-flex justify-content-end">
+
+                <!-- Dropdown for available Geckito versions -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        RESOURCES
+                    </a>
+                    <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/pages/sdk.html">SDK</a>
+                        <a class="dropdown-item" href="https://github.com/geckito/geckito-templates">Templates</a>
+                        <a class="dropdown-item" href="/pages/pbuild.html">Build Tool</a>
+                    </div>
+                </li>
+                <!-- DOCS -->
+<!--
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        DOCUMENTATION
+                    </a>
+                    <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="https://www.geckito.org/scope/">Scope</a>
+                    </div>
+                </li>
+-->
+                <!-- FAQ -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/faq.html">FAQ</a>
+                </li>
+                <!-- NEWS -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/news.html">NEWS</a>
+                </li>
+                <!-- Contact -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/contact.html">CONTACT</a>
+                </li>
+<!--
+                <li class="nav-item">
+                    <a class="nav-link" href="https://twitter.com/Geckito" target="_blank">
+                        <img src="img/twitter.svg" alt="Geckito - Twitter" title="Twitter" />
+                    </a>
+                </li>
+-->
+            </ul>
+        </nav>
+        <!-- #nav -->
+    <div class="landing-description">
+      <img class="geckito-logo" src="/img/geckito-white.png" alt="Geckito logo">
+      <p>Linux for Embedded, long term maintainable</p>
+      <div class="cta-section">
+<!--
+        <a href='/pages/stable-version.html' class="btn btn-primary">
+          <span class="badge eos-icons">get_app</span>
+          Get new 2021.04!
+        </a>
+        <a href="/pages/source-code.html">
+        <button type="button" class="btn btn-light">
+          <span class="badge eos-icons">code</span>
+          Source code
+        </button>
+        </a>
+-->
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container page-wrapper">
+    <div class="container">
+        <div class="row content-padding subpage-content">
+        <h3>Goals</h3>
+	<p>The Geckito project has multiple sub projects. All of them have the goal to provide the best
+	   solution for maintainable IoT solutions.</p>
+        <h4>IoT Ready Code Base</h4>
+        <p>Enhance the existing code base of a classic Linux distribution to become ready for IoT appliances. This gives 
+	   the advantage to have a maintained code base in your solution. We start with openSUSE Factory for latest Linux 
+	   based on a rolling release. Afterwards the openSUSE Leap code base will deliver a stable base for defined time. 
+	   And an even longer timeframe is possible via the SUSE Linux Enterprise code base.</p>
+	<p>However, multiple projects need to be done to fullfill this goal.</p>
+           <h5>Bit-wise reproducible builds</h5>
+	   <p>SUSE distributions are build in <a href="https://www.openbuildservice.org">OBS</a> which guarantees reproducible
+	      build environments. And build results are compared automatically with former build results. However, there are still
+	      some pieces where builds change on rebuild. For example when a time code is included. <a href="https://en.opensuse.org/openSUSE:Reproducible_Builds" target="_blank">Start page on openSUSE.</a></p>
+           <h5>Cross Architecture Builds</h5>
+	   <p>Packages shall also become cross buildable as much as possible. This allows fast rebuilds avoiding any emulator.</p>
+	   <ul>
+		   <li>Code Base cross buildable: 30%</li>
+		   <li>Image cross buildable: 90%</li>
+	   </ul>
+           <h5>openSUSE Leap: Single Layer Rebuilds</h5>
+	   <p>openSUSE Leap and SUSE Linux Enterprise distributions are using service pack layering to control changes due
+	      to changed binaries over the live time (up to 15 years). While this is good for keeping changes low it creates 
+	      also the problem that each package needs to stay in it's build layer. And if it get moved to another layer build
+	      failures may occur (and of course extensive testing is needed). For IoT projects, where you may want to rebuild
+	      all sources this creates a complexity which is not wanted. Therefore the code base will get adapted that all sources
+	      are rebuildable on latest service packs and maintenance updates. The <a href="https://build.opensuse.org/project/show/openSUSE:Step:FrontRunner" target="_blank">FrontRunner Project in OBS</a> show the current state of problems to be solved.</p>
+        <h4>Build Tooling</h4>
+	<p>The new <a ref="/pages/pbuild.html">pbuild</a> tool allows to build multiple packages in one go. It evaluates the need on rebuilds automatically, can build various formats and creates dynamic sysroots for cross builds. It can be used to rebuild everything from source or just the needed parts.</p>
+        <h4>Device specific templates</h4>
+	<p>We want to build up a device specific template collection to allow easy start for many devices. The first device which has been picked is the Raspberry Pi 4.</p>
+        </div>
+    </div>
+    <!-- #container -->
+  <!-- Footer -->
+  <footer>
+    <div class="row content-padding">
+      <div class="col-md-4 footer-description">
+        <h4>Geckito</h4>
+        <span class="footer-legal">
+          © 2021 The Geckito Project
+        </span>
+      </div>
+
+      <div class="col-md">
+        <h6>Project</h6>
+        <ul>
+          <li><a href="https://www.geckito.org/geckito-docs/">Documentation</a></li>
+          <li><a href="/pages/faq.html">FAQ</a></li>
+          <li><a href="/pages/contact.html">Contact</a></li>
+        </ul>
+      </div>
+<!--
+      <div class="col-md">
+        <h6>Related links</h6>
+        <ul>
+          <li><a href="https://www.suse.com/products/suse-manager/">SUSE Manager</a></li>
+          <li><a href="https://www.saltstack.com/">SaltStack</a></li>
+          <li><a href="https://cobbler.github.io/">Cobbler</a></li>
+          <li><a href="https://spacewalkproject.github.io"/>Spacewalk</a></li>
+        </ul>
+      </div>
+-->
+      <div class="col-md">
+        <h6>Social</h6>
+        <div class="social-links">
+          <a href="https://github.com/geckito" target="_blank">
+            <img src="/img/github_white.svg" alt="Geckito - Github" title="GitHub source repository">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- end footer -->
+</div>
+<!-- .page-wrapper -->
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="../js/script.js"></script>
+</html>
