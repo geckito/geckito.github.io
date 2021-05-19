@@ -109,6 +109,11 @@
                 <p>A container is provided which includes the entire tooling. Further software can get installed via zypper inside of the container. It can get pulled on any Linux distribution using podman or docker tooling.</p>
                 <code>$ podman pull registry.opensuse.org/geckito/sdk/main/images/geckito/sdk:15.3
 		</code>
+		<p>To run a shell execute </p>
+                <code>$ docker run -ti $IMAGE_ID
+		</code>
+		<p>The container can be used in Eclipse IDE. Install for that the "C/C++ Docker Container Launch Support" via Help - "Install new software" menu. Afterwards you need to select the container via Project - Properties - C/C++ Build - Settings - Container Settings.</p>
+		<p>The container can be used in MS Visual Code via the Remote - Containers extension. </p>
             </div>
             <h4><a href="#code">MS-Windows WSL Image</a></h4>
             <div class="subpage-content-push-right">    
