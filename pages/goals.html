@@ -124,8 +124,13 @@
 	      failures may occur (and of course extensive testing is needed). For IoT projects, where you may want to rebuild
 	      all sources this creates a complexity which is not wanted. Therefore the code base will get adapted that all sources
 	      are rebuildable on latest service packs and maintenance updates. The <a href="https://build.opensuse.org/project/show/openSUSE:Step:FrontRunner" target="_blank">FrontRunner Project in OBS</a> show the current state of problems to be solved.</p>
+
         <h4>Build Tooling</h4>
 	<p>The new <a ref="/pages/pbuild.html">pbuild</a> tool allows to build multiple packages in one go. It evaluates the need on rebuilds automatically, can build various formats and creates dynamic sysroots for cross builds. It can be used to rebuild everything from source or just the needed parts.</p>
+	<p>The tool is agnoistic to the way you manage your sources. It works with git clones or with any OBS project checkout.</p>
+        <h4>SDK for Application Developers</h4>
+	<p>Application developers need to be able to build their applications in an easy and fast way. It must be possible to build for the target from any IDE. Important subgoals are to support Eclipse, MS Visual Code and Qt Creator.</p>
+
         <h4>Device specific templates</h4>
 	<p>We want to build up a device specific template collection to allow easy start for many devices. The first device which has been picked is the Raspberry Pi 4.</p>
         </div>
