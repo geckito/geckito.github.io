@@ -76,7 +76,7 @@
         <!-- #nav -->
     <div class="landing-description">
       <img class="geckito-logo" src="/img/geckito-white.png" alt="Geckito logo">
-      <p>Embedded Linux with long-term maintenance support</p>
+      <p>Linux for Embedded, long term maintainable</p>
       <div class="cta-section">
 <!--
         <a href='/pages/stable-version.html' class="btn btn-primary">
@@ -104,13 +104,13 @@
       <div class="col-md">
         <h3>What is Geckito?</h3>
         <p class="section-description">
-          Geckito is a tool set that makes it possible to create ready-to-use system images for your embedded, edge, and IoT projects. The resulting system images are based on openSUSE and SUSE Linux Enterprise -- high-quality, rock solid, and actively maintained Linux distributions. Geckito can run on Linux and Windows, and it provides support for multiple target architecture, including x86 and ARM. Using Geckito you can compile the required software from sources, or you can use existing binary packages from trusted repositories. Using Geckito doesn't require any specific technical skills beyond working knowledge of Linux and Git. Moreover, Geckito integrates nicely with your favorite IDE.
+	  Geckito brings the high quality maintained openSUSE/SUSE distribution to your embedded, edge and
+	  IoT projects.
+          It runs under Linux and Windows, and supports multiple target architectures like x86 and ARM.
+          You can work offline and compile from sources, or reuse trusted repositories for speed.
+          With IDE integration, cross-compilation and image builds, Geckito has you productive in no time.
+          And it’s built to last for long-term maintainability.
         </p>
-        <h3>What can Geckito do for me?</h3>
-        <p class="section-description">
-          Geckito's main objective is to give you the ability to generate ready-to-use images with a minimum of effort. No matter whether you work in a Raspberry Pi-based project in your spare time, do embedded development for a living, or manage a fleet of IoT devices, Geckito can take the burden of generating images off your shoulders. With Geckito, you can use you favorite IDE to build images tailored to your specific needs. Better still, Geckito significantly reduces the effort of maintaining the created images.
-        </p> 
-        <p>Find out more about Geckito's components below.</p>
 
         <div class="accordion" id="accordion-geckito">
           <!-- Start item -->
@@ -122,7 +122,13 @@
             <div id="item1" class="collapse show accordion-content" aria-labelledby="headingOne"
                  data-parent="#accordion-geckito">
               <p>
-                <a href="https://github.com/openSUSE/obs-build">pbuild</a> is a cornerstone of Geckito. This tool allows you to build images, containers, packages. pbuild doesn't rely on any external back-end or cloud service, and the entire building process happens in your local environment. But if needed, the tool can pull the required assets and packages from online repositories.
+                The pbuild tool builds multiple artefacts in many formats like images, containers or packages.
+		It can work completely offline, but also use online resources.
+              </p>
+              <p>
+                Application developers can use the SDK on Linux or MS-Windows to develop their
+		solution with shortest turn around times. It integrates into IDE and allows also
+		cross architecture compile.
               </p>
             </div>
           </div>
@@ -136,12 +142,13 @@
             <div id="item2" class="collapse hide accordion-content" aria-labelledby="headingOne"
               data-parent="#accordion-geckito">
               <p>
-                Based on the popular openSUSE distribution, Geckito is capable of delivering binaries and sources suitable
-		for embedded development. The toolset is designed to create reproducible and cross-architecture builds.
+                The Geckito project is based on the popular openSUSE distribution to deliver binaries and sources suitable
+		for embedded development. It offers reproducible and cross architecture builds for a defined
+		maintenance time frame.
               </p>
               <p>
-	        The shared codebase with the build script guarantees that the resulting builds remain compatible with the build
-		results from the Open Build Service (especially for openSUSE and SUSE Linux Enterprise distributions).
+	        The shared code base with the build script guarantees that the builds stay compatible with the build
+		results from the Open Build Service (esp. for openSUSE and SUSE Linux Enterprise distributions).
               </p>
             </div>
           </div>
@@ -151,13 +158,13 @@
           <div class="accordion-wrap">
             <div class="accordion-header" data-toggle="collapse" data-target="#item3" aria-expanded="false"
               aria-controls="item3">
-              <h5><img src="img/plus.svg" class="accordion-plus">Templates</h5>
+              <h5><img src="img/plus.svg" class="accordion-plus">A collection of templates</h5>
             </div>
             <div id="item3" class="collapse hide accordion-content" aria-labelledby="headingOne"
               data-parent="#accordion-geckito">
               <p>
-                Geckito comes with a set of templates. You can think of them as recipes for building images. Templates can include the
-		usage of pre-build binaries, custom RPM packages, container and custom application builds.
+                Templates demonstrate how the to build small, targeted images. This can include the
+		usage of pre-build binaries, own rpm packages, container and own application builds.
               </p>
             </div>
           </div>
@@ -185,9 +192,10 @@
             </div>
             <div id="item2-2" class="collapse hide accordion-content" aria-labelledby="headingOne"
               data-parent="#accordion-geckito-2">
-              <p>
-                One of the main objectives of the Geckito project is to enhance stable distributions to accommodate IoT requirements. This includes
-                an easy way to rebuild and modify key distribution parts, while allowing you to reuse as much as possible from an enterprise-ready distribution. This ensures maintenance timelines and properly reviewed licenses and sources.
+              <p>Part of the project is to enhance stable distributions with the needs for IoT. This includes
+	         an easy way to rebuild and modify central distribution parts, but keeping the possibility to
+		 reuse as much as possible from an enterprise ready distribution. This allows to guarantee
+		 maintenance time lines and reviewed licenses and sources.
               </p>
             </div>
           </div>
@@ -205,7 +213,8 @@
 	      done via the SUSE build script, the Open Build Service or just native tooling.
               </p>
 	      <p>
-	      Windows users can work with the SDK via provided WSL images. These images can be used with Eclipse and Visual Studio Code IDE.
+	      MS-Windows users can use the SDK via provided WSL images, directly usable from our Eclipse or
+	      MS Visual Code IDE.
               </p>
             </div>
           </div>
@@ -219,8 +228,8 @@
             <div id="item3-3" class="collapse hide accordion-content" aria-labelledby="headingOne"
               data-parent="#accordion-geckito-2">
 	      <p>
-              Cross-architecture build tooling is also a part of the Geckito project. It is available
-	      for application development, and it can also be used for package or image builds, allowing fast turn-around times.
+              Cross Architecture build tooling is also developed as part of the Geckito project. It is available
+	      for application development, but also supported for package or image builds allowing fast turn around times.
               </p>
             </div>
           </div>
