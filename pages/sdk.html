@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Geckito - SDB</title>
+    <title>Geckito - SDK</title>
     <meta name="description" content="Geckito - SDB">
 
     <link rel="apple-touch-icon" sizes="152x152" href="../img/favicon/apple-touch-icon.png">
@@ -76,7 +76,7 @@
         <!-- #nav -->
     <div class="landing-description">
       <img class="geckito-logo" src="/img/geckito-white.png" alt="Geckito logo">
-      <p>Linux for Embedded, long term maintainable</p>
+      <p>Embedded Linux with long-term maintenance support</p>
       <div class="cta-section">
 <!--
         <a href='/pages/stable-version.html' class="btn btn-primary">
@@ -100,30 +100,31 @@
         <div class="row content-padding subpage-content">
             <h4><a href="#releasenotes">The Geckito SDK</a></h4>
             <div class="subpage-content-push-right">
-                <p>The Geckito SDK provides all build tooling and the templates for building your device image.
-		  This includes a native compiler toolchain, a cross compiler and build tooling for package and image building (pbuild).</p>
-                <p>The SDK is delivered in multiple forms:</p>
+                <p>The Geckito SDK provides build tooling and the templates necessary for building images for your devices.
+		  This includes a native compiler toolchain, a cross compiler and build tooling for package, and the pbuild image building tool.</p>
+                <p>There are several option to deploy the SDK.</p>
             </div>
-            <h4><a href="#code">Linux Container</a></h4>
+            <h4><a href="#code">Regular package installation</a></h4>
             <div class="subpage-content-push-right">    
-                <p>A container is provided which includes the entire tooling. Further software can get installed via zypper inside of the container. It can get pulled on any Linux distribution using podman or docker tooling.</p>
+	    <p>If you use openSUSE Linux or SUSE Linux Enterprise, you can deploy the SDK by installing the required packages. You can find the repository suitable for your system  in the <a href="https://download.opensuse.org/repositories/Geckito:SDK:Main/">Geckito:SDK:Main</a>pool.</p>
+            </div>
+            <h4><a href="#code">Linux Container Image</a></h4>
+            <div class="subpage-content-push-right">    
+                <p>A container image that includes the entire tooling is available in the <a href="registry.opensuse.org">openSUSE container registry</a>. You can install additional software inside a container using Zypper. You can pull the container image on any Linux distribution using Podman or Docker.</p>
+                <p>To pull the container image with Podman, use the following command:</p>
                 <code>$ podman pull registry.opensuse.org/geckito/sdk/main/images/geckito/sdk:15.3
 		</code>
-		<p>To run a shell execute </p>
-                <code>$ docker run -ti $IMAGE_ID
+		<p>To start a container and enter the interactive shell, run the command below:</p>
+                <code>$ podman run -ti $IMAGE_ID
 		</code>
 		<img src="/img/eclipse.png"><p>
-		The container can be used in <a href="https://www.eclipse.org/">Eclipse IDE</a>. Install for that the "C/C++ Docker Container Launch Support" via Help - "Install new software" menu. Afterwards you need to select the container via Project - Properties - C/C++ Build - Settings - Container Settings. The "build in container" check box has to be ticked and select the Geckito SDK container for building.</p>
+		The container can be used with <a href="https://www.eclipse.org/">Eclipse IDE</a>. To enable this functionality, install the <strong>C/C++ Docker Container Launch Support</strong> module via the <strong>Help &rarr; Install new software</strong> menu. Then select the container via <strong>Project &rarr; Properties &rarr; C/C++ Build &rarr; Settings &rarr; Container Settings</strong>. Make sure to enable the <strong>Build in container</strong>" option and select the Geckito SDK container for building.</p>
 		<img src="/img/visual-code.png"><p>
-		The container can be used in MS Visual Code via the Remote - Containers extension. </p>
+		The container can be used with MS Visual Code via the Remote - Containers extension. </p>
             </div>
-            <h4><a href="#code">MS-Windows WSL Image</a></h4>
+            <h4><a href="#code">Microsoft Windows WSL Image</a></h4>
             <div class="subpage-content-push-right">    
-		    <p>A MS-Windows WSL image is provided which includes the same tooling. Further software can get installed via zypper inside of the container. The image is currently not yet official signed and needs therefore installed as documented <a href="https://en.opensuse.org/WSL/Manual_Installation">here.</a> The WSL image can get found <a href="https://download.opensuse.org/repositories/Geckito:SDK:Main/images/">here.</a> 
-            </div>
-            <h4><a href="#code">Plain package installation</a></h4>
-            <div class="subpage-content-push-right">    
-	    <p>openSUSE Linux or SUSE Linux Enterprise users can also install the packages directly without a container. Find your matching repository <a href=""http://download.opensuse.org/repositories/Geckito:SDK:Main/>here.</a></p>
+		    <p>You can deploy Geckito SDK on Windows using the <a href="https://download.opensuse.org/repositories/Geckito:SDK:Main/images/">Windows WSL image</a>. The image includes the required tooling, and further software can be installed inside the container using Zypper. As the image is not yet official signed, you must install it using the following <a href="https://en.opensuse.org/WSL/Manual_Installation">instructions</a>.
             </div>
         </div>
     </div> <!-- #container -->
