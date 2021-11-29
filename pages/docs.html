@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Geckito - FAQ</title>
+    <meta name="description" content="Geckito - Docs">
+
+    <link rel="apple-touch-icon" sizes="152x152" href="../img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+          crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/eos-icons-extended.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+</head>
+<body>
+
+<!-- Start here -->
+<header>
+  <div class="container">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="https://www.geckito.org/">
+                <img src="/img/geckito-letters.png" alt="">
+            </a>
+
+            <ul class="nav top-nav d-flex justify-content-end">
+
+                <!-- Dropdown for available Geckito versions -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        RESOURCES
+                    </a>
+                    <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/pages/sdk.html">SDK</a>
+                        <a class="dropdown-item" href="https://github.com/geckito">Templates</a>
+                        <a class="dropdown-item" href="/pages/pbuild.html">Build Tool</a>
+                    </div>
+                </li>
+                <!-- DOCS -->
+<!--
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        DOCUMENTATION
+                    </a>
+                    <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="https://www.geckito.org/scope/">Scope</a>
+                    </div>
+                </li>
+-->
+                <!-- FAQ -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/faq.html">FAQ</a>
+                </li>
+                <!-- NEWS -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/news.html">NEWS</a>
+                </li>
+                <!-- Contact -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/contact.html">CONTACT</a>
+                </li>
+<!--
+                <li class="nav-item">
+                    <a class="nav-link" href="https://twitter.com/Geckito" target="_blank">
+                        <img src="img/twitter.svg" alt="Geckito - Twitter" title="Twitter" />
+                    </a>
+                </li>
+-->
+            </ul>
+        </nav>
+        <!-- #nav -->
+    <div class="landing-description">
+      <img class="geckito-logo" src="/img/geckito-white.png" alt="Geckito logo">
+      <p>Embedded Linux with long-term maintenance support</p>
+      <div class="cta-section">
+<!--
+        <a href='/pages/stable-version.html' class="btn btn-primary">
+          <span class="badge eos-icons">get_app</span>
+          Get new 2021.04!
+        </a>
+        <a href="/pages/source-code.html">
+        <button type="button" class="btn btn-light">
+          <span class="badge eos-icons">code</span>
+          Source code
+        </button>
+        </a>
+-->
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container page-wrapper">
+    <div class="container">
+        <div class="row content-padding subpage-content">
+            <ul>
+                <li>
+  <h5>Prerequisites</h5>
+		    <p>The only critical prerequisite is the pbuild tool, which is part of the SUSE's "build" package. The package is available from the openSUSE:Tools project for almost every Linux distribution:     
+           <div style="background: ghostwhite; 
+            font-size: 14px; 
+            padding: 6px; 
+            border: 1px solid lightgray; 
+            margin: 6px;">
+   https://download.opensuse.org/repositories/openSUSE:/Tools/
+      </div>
+        </p>
+          <p>The pbuild tool is in active development and rapidly changing. Thus it is probably better to directly clone it from git:
+<div style="background: ghostwhite; 
+            font-size: 14px; 
+            padding: 6px; 
+            border: 1px solid lightgray; 
+            margin: 6px;">
+   git clone https://github.com/openSUSE/obs-build
+    </div>
+        <p>pbuild can be executed directly from the directory containing the sources. Do not forget to use an absolute path to the tool if you run it from the obs-build git repository.
+
+pbuild can be used to compile entire distributions. The configurations from this collections make use of existing binaries to speed up the build and providing supported content as much as possible.
+
+References to external resources are defined via presets in the _pbuild files.
+        </p>
+                </li>
+                <li>
+     <h5>How To Use</h5>
+         <p>Change in any of the provided subdirectories and execute pbuild. pbuild will list existing presets if no default is defined, otherwise it will the build the image/packages.</p>                    
+         <p> It is recommended to use a specific vm-type:
+  <ul>
+<li>kvm: recommended default - reproducible build - works as non-root user after granting chroot capability:</li>
+</p>
+<div style="background: ghostwhite; 
+            font-size: 14px; 
+            padding: 6px; 
+            border: 1px solid lightgray; 
+            margin: 6px;">
+   # setcap CAP_SYS_CHROOT+ep /usr/bin/bsdtar
+</div>
+                </li>
+
+    <li>docker: works for simple packages - will fail for image builds - build results depending on kernel are not reproducible</li>
+
+    <li>chroot: not recommended, but current default :/ - unsecure building when resources are not trusted - build results depending on kernel are not reproducible
+                </li>
+                </div>
+                </p>
+
+<p>Example:</p>
+    <div style="background: ghostwhite; 
+            font-size: 14px; 
+            padding: 6px; 
+            border: 1px solid lightgray; 
+            margin: 6px;">
+    # cd minimal-os
+# pbuild --preset=openSUSE --vm-type=kvm
+  </div>
+                <li>
+<h5>How to Build for foreign architectures using a system emulator</h5>
+                    <p>The simplest, but also slowest way is to use a system emulator. Ensure to have the right emulator installed. To build for ARM you need to</p>
+</p>
+<div style="background: ghostwhite; 
+            font-size: 14px; 
+            padding: 6px; 
+            border: 1px solid lightgray; 
+            margin: 6px;">
+   # sudo zypper in qemu-arm
+</div>
+To run a build you need to use the "qemu" vm and to specify the target architecture. This works also as non-root if bsdtar has the chroot capability.
+    </p>
+<div style="background: ghostwhite; 
+            font-size: 14px; 
+            padding: 6px; 
+            border: 1px solid lightgray; 
+            margin: 6px;">
+   # cd minimal-os
+</div>
+<div style="background: ghostwhite; 
+            font-size: 14px; 
+            padding: 6px; 
+            border: 1px solid lightgray; 
+            margin: 6px;">
+   # pbuild --vm-type=qemu --arch=aarch64
+</div>
+   <h4>How to Build for foreign architectures using cross build</h4>
+   <h5>Build configuration examples</h5>
+       <p>minimal-os: small OS image which can be used on bare metal or VM emulators
+
+minimal-container: minimal container build</p>
+<h4>How to modify an example</h4>
+<h5>Compile during container build without packaging</h5>
+<ul>
+<li>1. use minimal-container example and modify the Dockerfile in Container directory</li>
+<li>2. uncomment the "zypper in" line to install further needed tooling</li>
+<li>3. add additional sources to compile to the Container director</li>
+<li>4. add compile commands</li>
+<li>5. cleanup the container by deinstalling unwanted tooling</li>
+<li>6. run pbuild in the minimal-container directory</li>
+</ul>
+<h5>Add a package to the project</h5>
+<ul>
+<li>1. Pick any example project as base</li>
+<li>2. create a subdirectory with package sources. Check https://build.opensuse.org if your package source may have been provided already by someone.</li>
+<li>3. You may want to add the resulting binary packages to the image build description.</li>
+<li>4. run pbuild in the project directory It will rebuild packages with changed sources and all packages which are affected by them.</li>
+        </div>
+    </div> <!-- #container -->
+    <!-- Footer -->
+  <footer>
+    <div class="row content-padding">
+      <div class="col-md-4 footer-description">
+        <h4>Geckito</h4>
+        <span class="footer-legal">
+          © 2021 The Geckito Project
+        </span>
+      </div>
+
+      <div class="col-md">
+        <h6>Project</h6>
+        <ul>
+          <li><a href="https://www.geckito.org/geckito-docs/">Documentation</a></li>
+          <li><a href="/pages/faq.html">FAQ</a></li>
+          <li><a href="/pages/contact.html">Contact</a></li>
+        </ul>
+      </div>
+<!--
+      <div class="col-md">
+        <h6>Related links</h6>
+        <ul>
+          <li><a href="https://www.suse.com/products/suse-manager/">SUSE Manager</a></li>
+          <li><a href="https://www.saltstack.com/">SaltStack</a></li>
+          <li><a href="https://cobbler.github.io/">Cobbler</a></li>
+          <li><a href="https://spacewalkproject.github.io"/>Spacewalk</a></li>
+        </ul>
+      </div>
+-->
+      <div class="col-md">
+        <h6>Social</h6>
+        <div class="social-links">
+          <a href="https://github.com/geckito" target="_blank">
+            <img src="/img/github_white.svg" alt="Geckito - Github" title="GitHub source repository">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+<!-- .page-wrapper -->
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="../js/script.js"></script>
+</html>
